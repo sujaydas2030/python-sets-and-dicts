@@ -1,0 +1,13 @@
+# Filter available books
+library_inventory = {
+    'The Great Gatsby': {'author': 'F. Scott Fitzgerald', 'availability': True},
+    'Moby Dick': {'author': 'Herman Melville', 'availability': False},
+    '1984': {'author': 'George Orwell', 'availability': True},
+    'War and Peace': {'author': 'Leo Tolstoy', 'availability': False}
+}
+
+available_books = {
+    book: details for book, details in library_inventory.items()
+    if details['availability']
+}
+print(available_books)
