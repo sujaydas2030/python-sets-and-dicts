@@ -1,0 +1,23 @@
+"""
+Dictionary operations and transformations.
+"""
+
+# Employee dictionary
+personal_info = {
+    'emp_001': {'name':'Ashok', 'age':30},
+    'emp_002': {'name':'Priya', 'age':31},
+    'emp_003': {'name':'Ash', 'age':20}
+}
+print(personal_info)
+
+# Swap keys & values
+from ast import literal_eval
+data = literal_eval(input())
+
+def swap_keys_and_values(d):
+    swapped = {}
+    for key, value in d.items():
+        swapped[value] = key
+    return swapped
+
+print(swap_keys_and_values(data))
